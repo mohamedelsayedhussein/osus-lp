@@ -12,24 +12,24 @@ $(document).ready(function () {
             link = $('nav.navigation__menu .links__title');
 
         timeline1
-            .to(splashScreen, { duration: .5, scale: 1 + scrollTop / 250 })
-        if (scrollTop > 700) {
+            .to(splashScreen, { duration: 1, scale: 1 + scrollTop / 40 , ease:'power1.inOut'})
+        if (scrollTop > 200) {
             timeline1
-                .to(splashScreen, { duration: .5, autoAlpha: 0 })
+                .to(splashScreen, { duration: .3, autoAlpha: 0, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, x: 0, autoAlpha: 1, ease: 'power1.out' }, ('-=.2'))
                 .to(separtor, { duration: .5, scaleY: 1, ease: 'expo.out' }, ('-=.5'))
-                .to(blackTxt, { duration: .5, x: 0, ease: 'power1.in' })
-                .to(outlineTxt, { duration: .5, x: 0, ease: 'power1.in' }, ('-=.2'))
+                .to(blackTxt, { duration: .5, x: 0, ease: 'power1.inOut' })
+                .to(outlineTxt, { duration: .5, x: 0, ease: 'power1.inOut' }, ('-=.2'))
                 .to(descInner, { duration: .5, y: 0, ease: 'power1.out' })
                 .to(link, { duration: .7, y: 0, autoAlpha: 1, stagger: .1, ease: 'power1.out' }, ('-=.5'))
         } else {
             timeline1
-                .to(splashScreen, { duration: .5, autoAlpha: 1 })
-                .to(formContact, { duration: .5, x: 100, autoAlpha: 0, ease: 'power1.out' }, ('-=.2'))
+                .to(splashScreen, { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
+                .to(formContact, { duration: .5, x: 100, autoAlpha: 0, ease: 'power1.in' }, ('-=.2'))
                 .to(separtor, { duration: .5, scaleY: 0, ease: 'expo.out' }, ('-=.5'))
                 .to(blackTxt, { duration: .5, x: '100%', ease: 'power1.in' })
                 .to(outlineTxt, { duration: .5, x: '-100%', ease: 'power1.in' }, ('-=.2'))
-                .to(descInner, { duration: .2, y: '100%', ease: 'power1.in' })
+                .to(descInner, { duration: .5, y: 100, ease: 'power1.in' })
                 .to(link, { duration: .7, y: 100, autoAlpha: 0, stagger: .1, ease: 'power1.in' }, ('-=.5'))
         }
         if (scrollTop > 500) {
