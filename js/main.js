@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var link = $('nav.navigation__menu .links__title');
 
     $(window).scroll(function () {
         let timeline1 = new gsap.timeline(),
@@ -8,14 +9,14 @@ $(document).ready(function () {
             splashScreen = $('.splash-screen'),
             separtor = $('.banner h1 a.separator'),
             descInner = $('.banner p.desc .desc__inner'),
-            formContact = $('header .form-contact'),
-            link = $('nav.navigation__menu .links__title');
+            formContact = $('header .form-contact');
 
         timeline1
-            .to(splashScreen, { duration: 1, scale: 1 + scrollTop / 40 , ease:'power1.inOut'})
-        if (scrollTop > 200) {
+            .to(splashScreen, { duration: 0, backgroundSize: 500 + scrollTop * 4 + 'px', ease: 'power1.inOut' })
+        if (scrollTop > 500) {
             timeline1
-                .to(splashScreen, { duration: .3, autoAlpha: 0, ease: 'power1.inOut' })
+                .to(splashScreen, { duration: .5, scale: 1.5, autoAlpha: 0, ease: 'power1.inOut' })
+                .to('.animated-shape', { duration: .3, autoAlpha: 0, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, x: 0, autoAlpha: 1, ease: 'power1.out' }, ('-=.2'))
                 .to(separtor, { duration: .5, scaleY: 1, ease: 'expo.out' }, ('-=.5'))
                 .to(blackTxt, { duration: .5, x: 0, ease: 'power1.inOut' })
@@ -24,7 +25,8 @@ $(document).ready(function () {
                 .to(link, { duration: .7, y: 0, autoAlpha: 1, stagger: .1, ease: 'power1.out' }, ('-=.5'))
         } else {
             timeline1
-                .to(splashScreen, { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
+                .to(splashScreen, { duration: .5, scale: 1, autoAlpha: 1, ease: 'power1.inOut' })
+                .to('.animated-shape', { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, x: 100, autoAlpha: 0, ease: 'power1.in' }, ('-=.2'))
                 .to(separtor, { duration: .5, scaleY: 0, ease: 'expo.out' }, ('-=.5'))
                 .to(blackTxt, { duration: .5, x: '100%', ease: 'power1.in' })
@@ -34,8 +36,10 @@ $(document).ready(function () {
         }
         if (scrollTop > 500) {
             $('.back-to-top').fadeIn()
+            $('.scroll-down').fadeOut()
         } else {
             $('.back-to-top').fadeOut()
+            $('.scroll-down').fadeIn()
         }
     });
     // BACK TO TOP BUTTON
@@ -89,4 +93,14 @@ $(document).ready(function () {
         $(window).scroll(updateProgress);
 
     })(jQuery);
-})
+
+    //  SMOOTH SCROLL TO OFFSET SECTION
+    $(link).on('click', function (e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 1000);
+    });
+    
+});
