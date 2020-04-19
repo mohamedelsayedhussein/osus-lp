@@ -93,29 +93,25 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-contact">
+                            <h2 class="text-uppercase">Contact us</h2>
                             <form action="">
-                                <h2 class="text-uppercase">Contact us</h2>
-                                <div class="form-group mb-0">
-                                    <ion-icon name="person-sharp"></ion-icon>
-                                    <input type="text" class="form-control hover-target" placeholder="Name*">
+                                <div class="field hover-target">
+                                    <input type="text" id="name" name="name" placeholder="Who are you?" autofocus />
+                                    <label for="name">Name</label>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <ion-icon name="mail-sharp"></ion-icon>
-                                    <input type="email" class="form-control hover-target" placeholder="Email*">
+                                <div class="field hover-target">
+                                    <input type="text" id="email" name="email" placeholder="name@email.com" />
+                                    <label for="email">E-Mail</label>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <ion-icon name="call"></ion-icon>
-                                    <input type="text" class="form-control hover-target" placeholder="Mobile Number*">
+                                <div class="field hover-target">
+                                    <input type="text" id="mob" name="mob" placeholder="your mobile" />
+                                    <label for="email">mobile</label>
                                 </div>
-                                <div class="form-group form-group--msg mb-0">
-                                    <ion-icon name="chatbubble-ellipses-sharp"></ion-icon>
-                                    <textarea rows="4" class="form-control hover-target"
-                                        placeholder="Message*"></textarea>
+                                <div class="field hover-target">
+                                    <textarea id="msg" name="msg" placeholder="You message..."></textarea>
+                                    <label for="msg">Msg</label>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <ion-icon name="arrow-redo-sharp"></ion-icon>
-                                    <button type="submit" class='hover-target'>SEND</button>
-                                </div>
+                                <input class="button hover-target" type="submit" value="Send" />
                             </form>
                         </div>
                     </div>
@@ -239,8 +235,8 @@
                     <span class="dash" data-scroll></span>
                     <span class="the-title" data-scroll>02. sale</span>
                 </h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
+                <div class="row m-0">
+                    <div class="col-md-6 p-0">
                         <div class="prop-slider-wrapper">
                             <div class="prop-slider">
                                 <div class="item"><img class='img-fluid' src="img/s-1.jpg" alt=""></div>
@@ -248,38 +244,39 @@
                                 <div class="item"><img class='img-fluid' src="img/s-3.jpg" alt=""></div>
                             </div>
                             <div class="prop-slider-controllers">
-                                <button class="PrevArrow hover-target"><ion-icon name="play-outline"></ion-icon></button>
-                                <button class="NextArrow hover-target active"><ion-icon name="play-outline"></ion-icon></button>
+                                <button class="PrevArrow hover-target">
+                                    <ion-icon name="play-outline"></ion-icon>
+                                </button>
+                                <button class="NextArrow hover-target active">
+                                    <ion-icon name="play-outline"></ion-icon>
+                                </button>
                             </div>
                             <div class="tag"><span class='text-uppercase'>hot offer</span></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 p-0">
                         <div class="prop-details">
                             <div class="prop-location">
                                 <h5 class="text-capitalize">
-                                    <a href="single-property.html">cairo capital center</a>
+                                    cairo capital center
                                     <br>
-                                    <a href="single-property.html" class='sub-desc'>
+                                    <span class='sub-title'>
                                         <ion-icon name="location-outline"></ion-icon>
                                         new cairo, cairo
-                                    </a>
+                                    </span>
                                 </h5>
                             </div> <!-- ./ prop-location -->
                             <div class="price-box mt-2">
-                                <h5 class="price">
-                                    <a href='single-property.html'><strong>EGP 3,500,000</strong></a>
-                                </h5>
+                                <span>EGP 3,500,000</span>
                             </div> <!-- ./ price-box -->
-                            <div class="facilities mt-2">
-                                <ul>
-                                    <li>enim ipsam voluptatem voluptas</li>
-                                    <li>Consectetur adipisci velit sed quia</li>
-                                    <li>in reprehenderit in voluptate</li>
-                                    <li>in reprehenderit in voluptate</li>
-                                </ul>
+                            <div class="desc mt-2">
+                                <p>sit amet consectetur adipisicing elit. Iure, quod sit amet consectetur adipisicing
+                                    elit. Iure, quod sit amet consectetur adipisicing elit. Iure, quod sit amet
+                                    consectetur adipisicing elit. Iure, quod Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Iure, quod.</p>
+
                             </div>
-                            <div class="features mt-3">
+                            <div class="facilities mt-3">
                                 <ul class="d-flex">
                                     <li>
                                         <svg viewBox="0 0 512 512">
@@ -335,9 +332,10 @@
         $('.prop-slider').slick({
             autoplay: true,
             pauseOnDotsHover: true,
-            speed: 1000,
+            speed: 1800,
             slidesToShow: 1,
             slidesToScroll: 1,
+            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
             dots: false,
             arrows: true,
             prevArrow: '.prop-slider-controllers .PrevArrow',

@@ -12,7 +12,7 @@ $(document).ready(function () {
             formContact = $('header .form-contact');
 
         timeline1
-            .to(splashScreen, { duration: 0, backgroundSize: 500 + scrollTop * 4 + 'px', ease: 'power1.inOut' })
+            .to(splashScreen, { duration: 0, backgroundSize: 700 + scrollTop * 4 + 'px', ease: 'power1.inOut' })
         if (scrollTop > 500) {
             timeline1
                 .to(splashScreen, { duration: .5, scale: 1.5, autoAlpha: 0, ease: 'power1.inOut' })
