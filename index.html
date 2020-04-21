@@ -239,13 +239,44 @@
 		<section class="section about-prop" id='about-prop'>
 			<div class="container">
 				<h2 class="section-title">
-					<span class="the-dash" data-aos="zoom-in-right" data-aos-offset="-200"
+					<span class="the-dash" data-aos="zoom-in-right" data-aos-offset="0"
 						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)">
 					</span>
-					<span class="the-title" data-splitting data-aos="zoom-in-right" data-aos-offset="-200"
+					<span class="the-title" data-splitting data-aos="zoom-in-right" data-aos-offset="0"
 						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)" data-aos-delay="300">02. about
 						property</span>
 				</h2>
+				<div class="prop-details mb-5">
+					<h3>Property Details</h3>
+					<div class="text">
+						Real Estate agents are Property consisting of land and the buildings on it, along
+						with its seds naturals resources such seds as crops, minerals, or water; immovable
+						property of this nature.
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-5">
+							<ul class="styled-list">
+								<li>Water Strg : 5000/ltr</li>
+								<li>No of Floors : 2</li>
+								<li>No Air Condition : 2</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-5">
+							<ul class="styled-list">
+								<li>Bathroom : 2</li>
+								<li>No of Stair : 4</li>
+								<li>No of Kitchen : 1</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-5">
+							<ul class="styled-list">
+								<li>Bedrooms : 2</li>
+								<li>Parking Capacity : 4</li>
+								<li>Swimming Pool : 1</li>
+							</ul>
+						</div>
+					</div> <!-- ./ row -->
+				</div> <!-- ./ prop-details -->
 				<div class="row m-0">
 					<div class="col-md-6 p-0">
 						<div class="prop-slider-wrapper">
@@ -269,11 +300,10 @@
 						</div> <!-- ./ prop-slider-wrapper -->
 					</div> <!-- ./ col-md-6 -->
 					<div class="col-md-6 p-0">
-						<div class="prop-details">
+						<div class="prop-summary">
 							<div class="prop-location">
 								<h5 class="text-capitalize">
 									cairo capital center
-									<br>
 									<span class='sub-title'>
 										<ion-icon name="location-outline"></ion-icon>
 										new cairo, cairo
@@ -324,7 +354,7 @@
 									</li>
 								</ul>
 							</div> <!-- ./ features -->
-						</div> <!-- ./ prop-details -->
+						</div> <!-- ./ prop-summary -->
 					</div> <!-- ./ col-md -->
 				</div> <!-- ./ row -->
 				<div class="row mt-5">
@@ -378,79 +408,110 @@
 					</div> <!-- ./ col-12 -->
 				</div> <!-- ./ row -->
 			</div> <!-- ./ container -->
-			<div class="row mt-5">
-				<div class="col-12 mt-5">
-					<div class="container">
-						<div class="inner-text mt-3">
-							<h4 class="text-capitalize">photo gallery</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab ducimus beatae, rerum
-								consequatur aspernatur.</p>
-						</div>
-					</div>
-					<div class="gallery-tabs">
+			<div class="gallery">
+				<div class="row mt-5">
+					<div class="col-12 mt-5">
 						<div class="container">
-							<nav>
-								<div class="nav nav-tabs" id="nav-tab">
-									<a class="nav-item nav-link active" data-toggle="tab" href="#maps">maps & street
-										view</a>
-									<a class="nav-item nav-link" data-toggle="tab" href="#f-plan">floorplan</a>
-								</div>
-							</nav>
-						</div>
-						<div class="tab-content gallery-parent" id="nav-tabContent">
-							<div class="tab-pane show active" id="maps">
-								<div class="container">
-									<div id="map"></div>
-								</div>
+							<div class="inner-text text-center mt-3 mb-5">
+								<h4 class=" gal-title text-capitalize mb-3">photo <span>gallery</span></h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab ducimus beatae,
+									rerum
+									consequatur aspernatur.</p>
 							</div>
-							<div class="tab-pane" id="f-plan">
-								<div class="row m-0">
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
+						</div>
+						<div class="gallery-tabs">
+							<div class="container">
+								<nav>
+									<div class="nav nav-tabs mb-3" id="nav-tab">
+										<a class="nav-item hover-target nav-link active" data-toggle="tab"
+											href="#maps">maps & street
+											view</a>
+										<a class="nav-item hover-target nav-link" data-toggle="tab"
+											href="#f-plan">floorplan</a>
 									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
+								</nav>
+							</div>
+							<div class="tab-content gallery-parent" id="nav-tabContent">
+								<div class="tab-pane show active" id="maps">
+									<div class="container">
+										<div id="map"></div>
 									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
-									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
-									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
-									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
-									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
-									</div>
-									<div class="col-lg-3 col-md-6 p-0">
-										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
-											<img class='img-fluid' src="img/d.jpg">
-										</a>
+								</div>
+								<div class="tab-pane" id="f-plan">
+									<div class="gallery-grid">
+										<div class="row m-0">
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp1.jpg">
+														<img class='img-fluid' src="img/fp1.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp2.jpg">
+														<img class='img-fluid' src="img/fp2.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp3.jpg">
+														<img class='img-fluid' src="img/fp3.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp4.jpg">
+														<img class='img-fluid' src="img/fp4.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp5.jpg">
+														<img class='img-fluid' src="img/fp5.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp6.jpg">
+														<img class='img-fluid' src="img/fp6.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp7.jpg">
+														<img class='img-fluid' src="img/fp7.jpg">
+													</a>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-6 p-0">
+												<div class="box">
+													<a class='hover-target' data-fancybox="gallery" data-height="400"
+														href="img/fp8.jpg">
+														<img class='img-fluid' src="img/fp8.jpg">
+													</a>
+												</div>
+											</div>
+										</div> <!-- ./ row -->
 									</div>
 								</div> <!-- ./ tab-pane -->
-							</div> <!-- ./ tab-pane -->
-						</div> <!-- ./ tab-content gallery-parent -->
-					</div> <!-- ./ gallery-tabs -->
-				</div> <!-- ./ col-12 -->
-			</div> <!-- ./ row -->
+							</div> <!-- ./ tab-content gallery-parent -->
+						</div> <!-- ./ gallery-tabs -->
+					</div> <!-- ./ col-12 -->
+				</div> <!-- ./ row -->
+			</div> <!-- ./ gallery -->
 		</section> <!-- ./ section about-prop -->
 		<footer class='footer' id='footer-contact'>
 			<div class="container">
@@ -797,8 +858,6 @@
 
 		// INIT FANCYBOX GALLERY PLUGIN
 		$('[data-fancybox="gallery"]').fancybox({
-			openEffect: "none",
-			closeEffect: "none",
 			// loop: false,
 			// closeExisting: false,
 			// parentEl: ".gallery-parent",

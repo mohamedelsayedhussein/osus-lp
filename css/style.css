@@ -1019,44 +1019,47 @@ section.about-prop .prop-slider-controllers button.active {
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
-section.about-prop .prop-details {
+section.about-prop .prop-summary {
     background: #f3f4f5;
     height: 100%;
     padding: 0 2rem;
 }
 @media (max-width: 767px) {
-    section.about-prop .prop-details {
+    section.about-prop .prop-summary {
         padding: 0 1rem 1rem;
     }
 }
-section.about-prop .prop-details .prop-location h5 {
-    font-size: 1.2rem;
+section.about-prop .prop-summary .prop-location h5 {
+    font-size: 1.5rem;
     color: #6e6b6b;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0 .7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.prop-details .prop-location h5 .sub-title {
+.prop-summary .prop-location h5 .sub-title {
+    display: block;
+    padding-top: 0.2rem;
     font-size: 0.8rem;
     color: #777;
     font-family: "Poppins", sans-serif;
 }
-.prop-details .prop-location h5 .sub-title ion-icon {
+.prop-summary .prop-location h5 .sub-title ion-icon {
     color: #d98f28;
     font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
     margin-top: -2px;
 }
-section.about-prop .prop-details .price-box {
+section.about-prop .prop-summary .price-box {
     color: #d98f28;
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
 }
-section.about-prop .prop-details .desc {
+section.about-prop .prop-summary .desc {
     color: #777;
     font-family: "Poppins", sans-serif;
     font-size: 0.8rem;
 }
-section.about-prop .prop-details .facilities li {
+section.about-prop .prop-summary .facilities li {
     margin-right: 0.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1065,16 +1068,16 @@ section.about-prop .prop-details .facilities li {
     -ms-flex-align: center;
     align-items: center;
 }
-section.about-prop .prop-details .facilities li:last-child {
+section.about-prop .prop-summary .facilities li:last-child {
     margin-right: 0;
 }
-section.about-prop .prop-details .facilities li svg {
+section.about-prop .prop-summary .facilities li svg {
     width: 25px;
     height: 25px;
     fill: #d98f28;
     margin-right: 0.5rem;
 }
-section.about-prop .prop-details .facilities li > span {
+section.about-prop .prop-summary .facilities li > span {
     color: #777;
     font-family: "Poppins", sans-serif;
 }
@@ -1151,7 +1154,14 @@ section.about-prop .panorama-slider-controllers button,
     width: 100%;
     animation: ProgressDots 11s both;
 }
-@keyframes ProgressDots{from{width:0px;}to{width:100%;}}
+@keyframes ProgressDots {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
 .panorama-slider .slider-nav {
     position: absolute;
     bottom: -50px;
@@ -1192,8 +1202,8 @@ section.about-prop .panorama-slider-controllers button,
     color: #242528;
 }
 .panorama-slider .slider-nav .item-nav h3 {
-    font-weight: 600;
     letter-spacing: 1px;
+    border-bottom: 1px solid;
 }
 @media (max-width: 450px) {
     .panorama-slider .slider-nav {
@@ -1209,9 +1219,75 @@ section.about-prop .panorama-slider-controllers button,
 .slick-slide {
     outline: none !important;
 }
+section.about-prop .gallery .gal-title {
+    color: #424040;
+    font-size: 2rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding-top: 2rem;
+}
+section.about-prop .gallery .gal-title > span {
+    color: #D98F28;
+}
+section.about-prop .gallery .gal-title + p {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    width: 75%;
+    margin: auto;
+}
+.gallery-tabs .nav-tabs {
+    justify-content: center;
+    border: none;
+}
+.gallery-tabs .nav-tabs .nav-item {
+    text-transform: capitalize;
+    color: #424040;
+    margin: 0 .5rem;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all .2s linear;
+}
+.gallery-tabs .nav-tabs .nav-item.active,
+.gallery-tabs .nav-tabs .nav-item:hover {
+    background: #D98F28;
+    border-color: #D98F28;
+    color: #fff;
+}
+/*  ANIMATE BOOTSTRAP TABS */
+.tab-pane.active {
+    animation: slide-down .5s ease-out;
+}
+@keyframes slide-down {
+    0% { opacity: 0; transform: translateY(2rem); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.tab-pane.active .gallery-grid .box {
+    animation: scaled .5s ease-out;
+}
+@keyframes scaled {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
 .gallery-tabs #map {
     width: 100%;
     height: 400px;
+}
+.gallery-tabs .gallery-grid {
+    padding: 0.5rem;
+}
+.gallery-tabs .gallery-grid .box {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.7rem;
+}
+.gallery-tabs .gallery-grid .box img {
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* FOOTER CONTACT STYLE  */
 footer.footer {
