@@ -4,12 +4,13 @@ $(document).ready(function () {
     $(window).scroll(function () {
         let timeline1 = new gsap.timeline(),
             scrollTop = $(this).scrollTop(),
-            blackTxt = $('.banner h1 span.blacked > span'),
-            outlineTxt = $('.banner h1 span.outlined > span'),
             splashScreen = $('.splash-screen'),
-            separtor = $('.banner h1 a.separator'),
-            descInner = $('.banner p.desc .desc__inner'),
-            formContact = $('header .form-contact');
+            formContact = $('header .form-contact'),
+            headline = $('header .banner h1.title span.headline'),
+            headlineChars = $('.banner h1.title span.headline .char');
+        descInner = $('.banner h3.subtitle span.desc__inner'),
+            descInnerWords = $('.banner h3.subtitle span.desc__inner .word'),
+            mask = $('header.header .fancy-mask');
 
         timeline1
             .to(splashScreen, { duration: 0, backgroundSize: 700 + scrollTop * 4 + 'px', ease: 'power1.inOut' })
@@ -17,22 +18,40 @@ $(document).ready(function () {
             timeline1
                 .to(splashScreen, { duration: .5, scale: 1.5, autoAlpha: 0, ease: 'power1.inOut' })
                 .to('.animated-shape', { duration: .3, autoAlpha: 0, ease: 'power1.inOut' })
-                .to(formContact, { duration: .5, x: 0, autoAlpha: 1, ease: 'power1.out' }, ('-=.2'))
-                .to(separtor, { duration: .5, scaleY: 1, ease: 'expo.out' }, ('-=.5'))
-                .to(blackTxt, { duration: .5, x: 0, ease: 'power1.inOut' })
-                .to(outlineTxt, { duration: .5, x: 0, ease: 'power1.inOut' }, ('-=.2'))
-                .to(descInner, { duration: .5, y: 0, ease: 'power1.out' })
-                .to(link, { duration: .7, y: 0, autoAlpha: 1, stagger: .1, ease: 'power1.out' }, ('-=.5'))
+                .to(formContact, { duration: .5, y: 0, opacity: 1, ease: 'power1.out' }, ('-=.2'))
+                .to(headline, { duration: .5, y: 0, ease: 'power1.inOut' }, ('-=.2'))
+                .to(headlineChars, { duration: 0, opacity: 1, x: 0, scale: 1, ease: 'none' })
+                .to(descInner, { duration: .5, y: 0, ease: 'power1.inOut' })
+                .set(descInnerWords, {
+                    onComplete: function () {
+                        this.targets().forEach(elem => elem.classList.add("active"))
+                    }
+                })
+                .set(mask, {
+                    onComplete: function () {
+                        this.targets().forEach(elem => elem.classList.add("show"))
+                    }
+                })
+                .to(link, { duration: .7, y: 0, autoAlpha: 1, stagger: .1, ease: 'power1.out' })
         } else {
             timeline1
                 .to(splashScreen, { duration: .5, scale: 1, autoAlpha: 1, ease: 'power1.inOut' })
                 .to('.animated-shape', { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
-                .to(formContact, { duration: .5, x: 100, autoAlpha: 0, ease: 'power1.in' }, ('-=.2'))
-                .to(separtor, { duration: .5, scaleY: 0, ease: 'expo.out' }, ('-=.5'))
-                .to(blackTxt, { duration: .5, x: '100%', ease: 'power1.in' })
-                .to(outlineTxt, { duration: .5, x: '-100%', ease: 'power1.in' }, ('-=.2'))
-                .to(descInner, { duration: .5, y: 100, ease: 'power1.in' })
-                .to(link, { duration: .7, y: 100, autoAlpha: 0, stagger: .1, ease: 'power1.in' }, ('-=.5'))
+                .to(formContact, { duration: .5, y: 30, opacity: 0, ease: 'power1.in' }, ('-=.2'))
+                .to(headline, { duration: .5, y: 50, ease: 'power1.inOut' }, ('-=.2'))
+                .to(headlineChars, { duration: 0, opacity: 0, x: 50, scale: 0.5, ease: 'none' })
+                .to(descInner, { duration: .5, y: 150, ease: 'power1.inOut' })
+                .set(descInnerWords, {
+                    onComplete: function () {
+                        this.targets().forEach(elem => elem.classList.remove("active"))
+                    }
+                })
+                .set(mask, {
+                    onComplete: function () {
+                        this.targets().forEach(elem => elem.classList.remove("show"))
+                    }
+                })
+                .to(link, { duration: .7, y: 100, autoAlpha: 0, stagger: .1, ease: 'power1.in' })
         }
         if (scrollTop > 500) {
             $('.back-to-top').fadeIn()
@@ -40,6 +59,11 @@ $(document).ready(function () {
         } else {
             $('.back-to-top').fadeOut()
             $('.scroll-down').fadeIn()
+        }
+        if (scrollTop > 1000) {
+            $('.floated-main-logo').fadeOut()
+        } else {
+            $('.floated-main-logo').fadeIn()
         }
     });
     // BACK TO TOP BUTTON
@@ -102,5 +126,8 @@ $(document).ready(function () {
             scrollTop: $(href).offset().top
         }, 1000);
     });
-    
+
+
+
+
 });

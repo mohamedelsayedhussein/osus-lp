@@ -2,346 +2,810 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-select.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- ION ICON (LIBRARY OF ICONS) -->
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Landing Page</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="css/splitting.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- ION ICON (LIBRARY OF ICONS) -->
+	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-    <!-- CUSTOM CURSOR -->
-    <div class='cursor' id="cursor"></div>
-    <div class='cursor2' id="cursor2">
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-    </div>
-    <div class='cursor3' id="cursor3"></div>
-    <!-- ANIMATED SHAPE -->
-    <div class="animated-shape"></div>
-    <!-- BACK TO TOP BUTOON -->
-    <div class="back-to-top hover-target">
-        <ion-icon name="chevron-up-outline" class='chev'></ion-icon>
-    </div>
+	<!-- CUSTOM CURSOR -->
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div>
+	<div class='cursor3' id="cursor3"></div>
+	<!-- ANIMATED SHAPE -->
+	<div class="animated-shape"></div>
+	<!-- BACK TO TOP BUTOON -->
+	<div class="back-to-top hover-target">
+		<ion-icon name="chevron-up-outline" class='chev'></ion-icon>
+	</div>
 
-    <!-- CHAT BUTTON -->
-    <nav class="chat hover-target" title='Message Us'>
-        <input type="checkbox" id="chat__input">
-        <label class="chat__btn" for="chat__input">
-            <img src="img/message.svg" alt="">
-        </label>
-        <a href="#" class="chat__messanger" title='Messanger'>
-            <img src="img/messenger.svg" alt="">
-        </a>
-        <a href="#" class="chat__whatsapp" title='WhatsApp'>
-            <img src="img/whatsapp.svg" alt="">
-        </a>
-    </nav>
-    <!-- NAVIGATION MENU -->
-    <nav class='navigation__menu'>
-        <ul class='links d-flex flex-column'>
-            <li class='links__item'>
-                <a id='home_link' class='links__title hover-target' href="#features">01. features</a>
-            </li>
-            <li class='links__item'>
-                <a class='links__title hover-target' href="#sale">02. sale</a>
-            </li>
-            <li class='links__item'>
-                <a class='links__title hover-target' href="#about">03. about</a>
-            </li>
-            <li class='links__item'>
-                <a class='links__title hover-target' href="#" data-target=''>04. contact us</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- SCROLL DOWN -->
-    <div class='scroll-down'><span>SCROLL</span></div>
-    <!-- SPLASH SCREEN -->
-    <div class="splash-screen"></div>
-    <!-- MAIN LOGO -->
-    <div class="floated-fixed-logo">
-        <img src="img/logo.png" alt="">
-    </div>
+	<!-- CHAT BUTTON -->
+	<nav class="chat hover-target" title='Message Us'>
+		<input type="checkbox" id="chat__input">
+		<label class="chat__btn" for="chat__input">
+			<img src="img/message.svg" alt="">
+		</label>
+		<a href="#" class="chat__messanger" title='Messanger'>
+			<img src="img/messenger.svg" alt="">
+		</a>
+		<a href="#" class="chat__whatsapp" title='WhatsApp'>
+			<img src="img/whatsapp.svg" alt="">
+		</a>
+	</nav>
+	<!-- NAVIGATION MENU -->
+	<nav class='navigation__menu'>
+		<ul class='links d-flex flex-column'>
+			<li class='links__item'>
+				<a id='home_link' class='links__title hover-target' href="#features">01. features</a>
+			</li>
+			<li class='links__item'>
+				<a class='links__title hover-target' href="#about-prop">02. about property</a>
+			</li>
+			<li class='links__item'>
+				<a class='links__title hover-target' href="#about">03. </a>
+			</li>
+			<li class='links__item'>
+				<a class='links__title hover-target' href="#footer-contact">04. contact us</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- SCROLL DOWN -->
+	<div class='scroll-down'><span>SCROLL DOWN</span></div>
+	<!-- SPLASH SCREEN -->
+	<div class="splash-screen"></div>
+	<!-- MAIN LOGO -->
+	<div class="floated-main-logo">
+		<img src="img/logo.png" alt="">
+	</div>
 
-    <header class='header'>
-        <div class="banner-wrapper">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="banner text-center">
-                            <h1 class='title'>
-                                <span class='blacked'><span data-text='Your new home is'>Your new home is</span></span>
-                                <a class="separator"></a>
-                                <span class="outlined"><span>here</span></span>
-                            </h1>
-                            <p class='desc'>
-                                <span class='desc__inner text-capitalize'>join our special offers, Hurry up! Limited
-                                    time offer.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-contact">
-                            <h2 class="text-uppercase">Contact us</h2>
-                            <form action="">
-                                <div class="field hover-target">
-                                    <input type="text" id="name" name="name" placeholder="Who are you?" autofocus />
-                                    <label for="name">Name</label>
-                                </div>
-                                <div class="field hover-target">
-                                    <input type="text" id="email" name="email" placeholder="name@email.com" />
-                                    <label for="email">E-Mail</label>
-                                </div>
-                                <div class="field hover-target">
-                                    <input type="text" id="mob" name="mob" placeholder="your mobile" />
-                                    <label for="email">mobile</label>
-                                </div>
-                                <div class="field hover-target">
-                                    <textarea id="msg" name="msg" placeholder="You message..."></textarea>
-                                    <label for="msg">Msg</label>
-                                </div>
-                                <input class="button hover-target" type="submit" value="Send" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <article class='main-content'>
-        <section class="features" id='features'>
-            <div class='indicator'>
-                <svg viewBox="-90 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="m166.238281 430.144531-89.769531-94.898437 29.058594-27.488282 60.632812 64.097657 60.273438-64.058594 29.132812 27.410156zm165.761719-38.144531v-272c0-66.167969-53.832031-120-120-120h-92c-66.167969 0-120 53.832031-120 120v272c0 66.167969 53.832031 120 120 120h92c66.167969 0 120-53.832031 120-120zm-120-352c44.113281 0 80 35.886719 80 80v272c0 44.113281-35.886719 80-80 80h-92c-44.113281 0-80-35.886719-80-80v-272c0-44.113281 35.886719-80 80-80zm-46 41c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 80c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 80c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 0" />
-                </svg>
-            </div>
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="dash" data-scroll></span>
-                    <span class="the-title" data-scroll>02. features</span>
-                </h2>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="feature">
-                            <div class="icon mb-3">
-                                <svg viewBox="0 0 512.00061 512">
-                                    <path
-                                        d="m412 136c0 5.519531 4.480469 10 10 10s10-4.480469 10-10-4.480469-10-10-10-10 4.480469-10 10zm0 0" />
-                                    <path
-                                        d="m452 256c0 12.808594-1.285156 25.59375-3.816406 38-1.105469 5.410156 2.386718 10.691406 7.796875 11.796875.675781.140625 1.347656.207031 2.011719.207031 4.652343 0 8.820312-3.269531 9.789062-8.003906 2.800781-13.722656 4.21875-27.851562 4.21875-42 0-31.488281-6.828125-61.789062-20.300781-90.0625-2.375-4.984375-8.339844-7.101562-13.328125-4.726562-4.988282 2.375-7.101563 8.34375-4.726563 13.332031 12.179688 25.5625 18.355469 52.96875 18.355469 81.457031zm0 0" />
-                                    <path
-                                        d="m306 346h-10v-130c0-5.523438-4.476562-10-10-10h-80c-5.523438 0-10 4.476562-10 10v40c0 5.523438 4.476562 10 10 10h10v80h-10c-5.523438 0-10 4.476562-10 10v40c0 5.523438 4.476562 10 10 10h100c5.523438 0 10-4.476562 10-10v-40c0-5.523438-4.476562-10-10-10zm-10 40h-80v-20h10c5.523438 0 10-4.476562 10-10v-100c0-5.523438-4.476562-10-10-10h-10v-20h60v130c0 5.523438 4.480469 10 10 10h10zm0 0" />
-                                    <path
-                                        d="m256 186c22.054688 0 40-17.945312 40-40s-17.945312-40-40-40-40 17.945312-40 40 17.945312 40 40 40zm0-60c11.027344 0 20 8.972656 20 20s-8.972656 20-20 20-20-8.972656-20-20 8.972656-20 20-20zm0 0" />
-                                    <path
-                                        d="m256 0c-137.976562 0-256 117.800781-256 256 0 47.207031 13.527344 97.410156 36.335938 135.382812l-35.824219 107.457032c-1.195313 3.589844-.261719 7.554687 2.417969 10.230468 2.691406 2.691407 6.660156 3.609376 10.234374 2.414063l107.457032-35.820313c37.96875 22.8125 88.171875 36.335938 135.378906 36.335938 138.011719 0 256-117.816406 256-256 0-138.011719-117.8125-256-256-256zm0 492c-45.285156 0-93.417969-13.363281-128.757812-35.746094-2.503907-1.585937-5.625-2.003906-8.515626-1.039062l-92.914062 30.972656 30.972656-92.914062c.953125-2.851563.570313-5.976563-1.039062-8.515626-22.382813-35.335937-35.746094-83.472656-35.746094-128.757812 0-127.925781 108.074219-236 236-236s236 108.074219 236 236-108.074219 236-236 236zm0 0" />
-                                </svg>
-                            </div>
-                            <div class="title mb-2">
-                                <h5 class="text-capitalize">exact information</h5>
-                            </div>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
-                                    odio eius facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="feature">
-                            <div class="icon mb-3">
-                                <svg viewBox="-42 0 512 512.001">
-                                    <path
-                                        d="m210.351562 246.632812c33.882813 0 63.21875-12.152343 87.195313-36.128906 23.96875-23.972656 36.125-53.304687 36.125-87.191406 0-33.875-12.152344-63.210938-36.128906-87.191406-23.976563-23.96875-53.3125-36.121094-87.191407-36.121094-33.886718 0-63.21875 12.152344-87.191406 36.125s-36.128906 53.308594-36.128906 87.1875c0 33.886719 12.15625 63.222656 36.128906 87.195312 23.980469 23.96875 53.316406 36.125 87.191406 36.125zm-65.972656-189.292968c18.394532-18.394532 39.972656-27.335938 65.972656-27.335938 25.996094 0 47.578126 8.941406 65.976563 27.335938 18.394531 18.398437 27.339844 39.980468 27.339844 65.972656 0 26-8.945313 47.578125-27.339844 65.976562-18.398437 18.398438-39.980469 27.339844-65.976563 27.339844-25.992187 0-47.570312-8.945312-65.972656-27.339844-18.398437-18.394531-27.34375-39.976562-27.34375-65.976562 0-25.992188 8.945313-47.574219 27.34375-65.972656zm0 0" />
-                                    <path
-                                        d="m426.128906 393.703125c-.691406-9.976563-2.089844-20.859375-4.148437-32.351563-2.078125-11.578124-4.753907-22.523437-7.957031-32.527343-3.3125-10.339844-7.808594-20.550781-13.375-30.335938-5.769532-10.15625-12.550782-19-20.160157-26.277343-7.957031-7.613282-17.699219-13.734376-28.964843-18.199219-11.226563-4.441407-23.667969-6.691407-36.976563-6.691407-5.226563 0-10.28125 2.144532-20.042969 8.5-6.007812 3.917969-13.035156 8.449219-20.878906 13.460938-6.707031 4.273438-15.792969 8.277344-27.015625 11.902344-10.949219 3.542968-22.066406 5.339844-33.042969 5.339844-10.96875 0-22.085937-1.796876-33.042968-5.339844-11.210938-3.621094-20.300782-7.625-26.996094-11.898438-7.769532-4.964844-14.800782-9.496094-20.898438-13.46875-9.753906-6.355468-14.808594-8.5-20.035156-8.5-13.3125 0-25.75 2.253906-36.972656 6.699219-11.257813 4.457031-21.003906 10.578125-28.96875 18.199219-7.609375 7.28125-14.390625 16.121094-20.15625 26.273437-5.558594 9.785157-10.058594 19.992188-13.371094 30.339844-3.199219 10.003906-5.875 20.945313-7.953125 32.523437-2.0625 11.476563-3.457031 22.363282-4.148437 32.363282-.679688 9.777344-1.023438 19.953125-1.023438 30.234375 0 26.726562 8.496094 48.363281 25.25 64.320312 16.546875 15.746094 38.4375 23.730469 65.066406 23.730469h246.53125c26.621094 0 48.511719-7.984375 65.0625-23.730469 16.757813-15.945312 25.253906-37.589843 25.253906-64.324219-.003906-10.316406-.351562-20.492187-1.035156-30.242187zm-44.90625 72.828125c-10.933594 10.40625-25.449218 15.464844-44.378906 15.464844h-246.527344c-18.933594 0-33.449218-5.058594-44.378906-15.460938-10.722656-10.207031-15.933594-24.140625-15.933594-42.585937 0-9.59375.316406-19.066407.949219-28.160157.617187-8.921874 1.878906-18.722656 3.75-29.136718 1.847656-10.285156 4.199219-19.9375 6.996094-28.675782 2.683593-8.378906 6.34375-16.675781 10.882812-24.667968 4.332031-7.617188 9.316407-14.152344 14.816407-19.417969 5.144531-4.925781 11.628906-8.957031 19.269531-11.980469 7.066406-2.796875 15.007812-4.328125 23.628906-4.558594 1.050781.558594 2.921875 1.625 5.953125 3.601563 6.167969 4.019531 13.277344 8.605469 21.136719 13.625 8.859375 5.648437 20.273437 10.75 33.910156 15.152344 13.941406 4.507812 28.160156 6.796875 42.273437 6.796875 14.113282 0 28.335938-2.289063 42.269532-6.792969 13.648437-4.410156 25.058594-9.507813 33.929687-15.164063 8.042969-5.140624 14.953125-9.59375 21.121094-13.617187 3.03125-1.972656 4.902344-3.042969 5.953125-3.601563 8.625.230469 16.566406 1.761719 23.636719 4.558594 7.636719 3.023438 14.121093 7.058594 19.265625 11.980469 5.5 5.261719 10.484375 11.796875 14.816406 19.421875 4.542969 7.988281 8.207031 16.289062 10.886719 24.660156 2.800781 8.75 5.15625 18.398438 7 28.675782 1.867187 10.433593 3.132812 20.238281 3.75 29.144531v.007812c.636719 9.058594.957031 18.527344.960937 28.148438-.003906 18.449219-5.214844 32.378906-15.9375 42.582031zm0 0" />
-                                </svg>
-                            </div>
-                            <div class="title mb-2">
-                                <h5 class="text-capitalize">dedicated agent</h5>
-                            </div>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
-                                    odio eius facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="feature">
-                            <div class="icon mb-3">
-                                <svg viewBox="0 0 512.00003 512.00003">
-                                    <path
-                                        d="m256 0c-107.941406 0-195.765625 87.824219-195.765625 195.765625v180.703125c0 24.914062 20.265625 45.179688 45.175781 45.179688 24.914063 0 45.179688-20.265626 45.179688-45.179688v-150.585938c0-24.910156-20.265625-45.175781-45.179688-45.175781-5.070312 0-9.867187 1.027344-14.425781 2.574219 6.425781-85.511719 77.902344-153.164062 165.015625-153.164062 87.066406 0 158.523438 67.589843 165.007812 153.042968-4.53125-1.550781-9.355468-2.453125-14.417968-2.453125-24.914063 0-45.179688 20.265625-45.179688 45.175781v150.585938c0 24.914062 20.265625 45.179688 45.179688 45.179688 5.304687 0 10.324218-1.085938 15.058594-2.773438v17.832031c0 8.308594-6.765626 15.058594-15.058594 15.058594h-108.1875c-6.238282-17.492187-22.796875-30.117187-42.402344-30.117187-24.910156 0-45.175781 20.265624-45.175781 45.175781 0 24.910156 20.265625 45.175781 45.175781 45.175781 19.605469 0 36.164062-12.628906 42.402344-30.117188h108.1875c24.910156 0 45.175781-20.265624 45.175781-45.175781 0-90.578125 0-150.265625 0-240.941406 0-107.941406-87.824219-195.765625-195.765625-195.765625zm0 0" />
-                                    <path
-                                        d="m481.882812 213.597656v175.15625c17.488282-6.234375 30.117188-22.792968 30.117188-42.402344v-90.351562c0-19.605469-12.628906-36.164062-30.117188-42.402344zm0 0" />
-                                    <path
-                                        d="m0 256v90.351562c0 19.609376 12.628906 36.167969 30.117188 42.402344v-175.15625c-17.488282 6.238282-30.117188 22.796875-30.117188 42.402344zm0 0" />
-                                </svg>
-                            </div>
-                            <div class="title mb-2">
-                                <h5 class="text-capitalize">support services</h5>
-                            </div>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
-                                    odio eius facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="feature">
-                            <div class="icon mb-3">
-                                <svg viewBox="0 0 47.001 47.001">
-                                    <g>
-                                        <g>
-                                            <g>
-                                                <path
-                                                    d="M46.907,20.12c-0.163-0.347-0.511-0.569-0.896-0.569h-2.927C41.223,9.452,32.355,1.775,21.726,1.775C9.747,1.775,0,11.522,0,23.501C0,35.48,9.746,45.226,21.726,45.226c7.731,0,14.941-4.161,18.816-10.857c0.546-0.945,0.224-2.152-0.722-2.699c-0.944-0.547-2.152-0.225-2.697,0.72c-3.172,5.481-9.072,8.887-15.397,8.887c-9.801,0-17.776-7.974-17.776-17.774c0-9.802,7.975-17.776,17.776-17.776c8.442,0,15.515,5.921,17.317,13.825h-2.904c-0.385,0-0.732,0.222-0.896,0.569c-0.163,0.347-0.11,0.756,0.136,1.051l4.938,5.925c0.188,0.225,0.465,0.355,0.759,0.355c0.293,0,0.571-0.131,0.758-0.355l4.938-5.925C47.018,20.876,47.07,20.467,46.907,20.12z" />
-                                                <path
-                                                    d="M21.726,6.713c-1.091,0-1.975,0.884-1.975,1.975v11.984c-0.893,0.626-1.481,1.658-1.481,2.83c0,1.906,1.551,3.457,3.457,3.457c0.522,0,1.014-0.125,1.458-0.334l6.87,3.965c0.312,0.181,0.65,0.266,0.986,0.266c0.682,0,1.346-0.354,1.712-0.988c0.545-0.943,0.222-2.152-0.724-2.697l-6.877-3.971c-0.092-1.044-0.635-1.956-1.449-2.526V8.68C23.701,7.598,22.816,6.713,21.726,6.713z M21.726,24.982c-0.817,0-1.481-0.665-1.481-1.48c0-0.816,0.665-1.481,1.481-1.481s1.481,0.665,1.481,1.481C23.207,24.317,22.542,24.982,21.726,24.982z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="title mb-2">
-                                <h5 class="text-capitalize">save your time</h5>
-                            </div>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
-                                    odio eius facere.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gate">
-                    <img src="img/b.jpg" class='img-fluid' alt="">
-                </div>
-            </div>
-        </section>
-        <section class="sale" id='sale'>
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="dash" data-scroll></span>
-                    <span class="the-title" data-scroll>02. sale</span>
-                </h2>
-                <div class="row m-0">
-                    <div class="col-md-6 p-0">
-                        <div class="prop-slider-wrapper">
-                            <div class="prop-slider">
-                                <div class="item"><img class='img-fluid' src="img/s-1.jpg" alt=""></div>
-                                <div class="item"><img class='img-fluid' src="img/s-2.jpg" alt=""></div>
-                                <div class="item"><img class='img-fluid' src="img/s-3.jpg" alt=""></div>
-                            </div>
-                            <div class="prop-slider-controllers">
-                                <button class="PrevArrow hover-target">
-                                    <ion-icon name="play-outline"></ion-icon>
-                                </button>
-                                <button class="NextArrow hover-target active">
-                                    <ion-icon name="play-outline"></ion-icon>
-                                </button>
-                            </div>
-                            <div class="tag"><span class='text-uppercase'>hot offer</span></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 p-0">
-                        <div class="prop-details">
-                            <div class="prop-location">
-                                <h5 class="text-capitalize">
-                                    cairo capital center
-                                    <br>
-                                    <span class='sub-title'>
-                                        <ion-icon name="location-outline"></ion-icon>
-                                        new cairo, cairo
-                                    </span>
-                                </h5>
-                            </div> <!-- ./ prop-location -->
-                            <div class="price-box mt-2">
-                                <span>EGP 3,500,000</span>
-                            </div> <!-- ./ price-box -->
-                            <div class="desc mt-2">
-                                <p>sit amet consectetur adipisicing elit. Iure, quod sit amet consectetur adipisicing
-                                    elit. Iure, quod sit amet consectetur adipisicing elit. Iure, quod sit amet
-                                    consectetur adipisicing elit. Iure, quod Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Iure, quod.</p>
+	<header class='header'>
+		<div class="fancy-mask"></div>
+		<div class="banner-wrapper">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="banner text-center">
+							<h1 class='title text-uppercase'>
+								<span class="headline" data-splitting>your new home is <strong>here</strong></span>
+							</h1>
+							<h3 class='subtitle text-capitalize'>
+								<span class='desc__inner' data-splitting>join our special offers, Hurry up! Limited
+									time offer.</span>
+							</h3>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-contact-wrapper">
+							<div class="form-contact">
+								<h2 class="text-uppercase">Contact us</h2>
+								<form action="">
+									<div class="field hover-target">
+										<input type="text" id="name" name="name" placeholder="Who are you?" autofocus />
+										<label for="name">Name</label>
+									</div>
+									<div class="field hover-target">
+										<input type="text" id="email" name="email" placeholder="name@email.com" />
+										<label for="email">E-Mail</label>
+									</div>
+									<div class="field hover-target">
+										<input type="text" id="mob" name="mob" placeholder="your mobile" />
+										<label for="email">mobile</label>
+									</div>
+									<div class="field hover-target">
+										<textarea id="msg" name="msg" placeholder="You message..."></textarea>
+										<label for="msg">Msg</label>
+									</div>
+									<input class="hover-target" type="submit" value="Send" />
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<article class='main-content'>
+		<section class="section features" id='features'>
+			<div class='indicator'>
+				<svg viewBox="-90 0 512 512" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="m166.238281 430.144531-89.769531-94.898437 29.058594-27.488282 60.632812 64.097657 60.273438-64.058594 29.132812 27.410156zm165.761719-38.144531v-272c0-66.167969-53.832031-120-120-120h-92c-66.167969 0-120 53.832031-120 120v272c0 66.167969 53.832031 120 120 120h92c66.167969 0 120-53.832031 120-120zm-120-352c44.113281 0 80 35.886719 80 80v272c0 44.113281-35.886719 80-80 80h-92c-44.113281 0-80-35.886719-80-80v-272c0-44.113281 35.886719-80 80-80zm-46 41c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 80c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 80c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20 20-8.953125 20-20-8.953125-20-20-20zm0 0" />
+				</svg>
+			</div>
+			<div class="container">
+				<h2 class="section-title">
+					<span class="the-dash" data-aos="zoom-in-right" data-aos-offset="0"
+						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)">
+					</span>
+					<span class="the-title" data-splitting data-aos="zoom-in-right" data-aos-offset="0"
+						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)" data-aos-delay="300">02. features</span>
+				</h2>
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<div class="feature">
+							<div class="icon mb-3">
+								<svg viewBox="0 0 512.00061 512">
+									<path
+										d="m412 136c0 5.519531 4.480469 10 10 10s10-4.480469 10-10-4.480469-10-10-10-10 4.480469-10 10zm0 0" />
+									<path
+										d="m452 256c0 12.808594-1.285156 25.59375-3.816406 38-1.105469 5.410156 2.386718 10.691406 7.796875 11.796875.675781.140625 1.347656.207031 2.011719.207031 4.652343 0 8.820312-3.269531 9.789062-8.003906 2.800781-13.722656 4.21875-27.851562 4.21875-42 0-31.488281-6.828125-61.789062-20.300781-90.0625-2.375-4.984375-8.339844-7.101562-13.328125-4.726562-4.988282 2.375-7.101563 8.34375-4.726563 13.332031 12.179688 25.5625 18.355469 52.96875 18.355469 81.457031zm0 0" />
+									<path
+										d="m306 346h-10v-130c0-5.523438-4.476562-10-10-10h-80c-5.523438 0-10 4.476562-10 10v40c0 5.523438 4.476562 10 10 10h10v80h-10c-5.523438 0-10 4.476562-10 10v40c0 5.523438 4.476562 10 10 10h100c5.523438 0 10-4.476562 10-10v-40c0-5.523438-4.476562-10-10-10zm-10 40h-80v-20h10c5.523438 0 10-4.476562 10-10v-100c0-5.523438-4.476562-10-10-10h-10v-20h60v130c0 5.523438 4.480469 10 10 10h10zm0 0" />
+									<path
+										d="m256 186c22.054688 0 40-17.945312 40-40s-17.945312-40-40-40-40 17.945312-40 40 17.945312 40 40 40zm0-60c11.027344 0 20 8.972656 20 20s-8.972656 20-20 20-20-8.972656-20-20 8.972656-20 20-20zm0 0" />
+									<path
+										d="m256 0c-137.976562 0-256 117.800781-256 256 0 47.207031 13.527344 97.410156 36.335938 135.382812l-35.824219 107.457032c-1.195313 3.589844-.261719 7.554687 2.417969 10.230468 2.691406 2.691407 6.660156 3.609376 10.234374 2.414063l107.457032-35.820313c37.96875 22.8125 88.171875 36.335938 135.378906 36.335938 138.011719 0 256-117.816406 256-256 0-138.011719-117.8125-256-256-256zm0 492c-45.285156 0-93.417969-13.363281-128.757812-35.746094-2.503907-1.585937-5.625-2.003906-8.515626-1.039062l-92.914062 30.972656 30.972656-92.914062c.953125-2.851563.570313-5.976563-1.039062-8.515626-22.382813-35.335937-35.746094-83.472656-35.746094-128.757812 0-127.925781 108.074219-236 236-236s236 108.074219 236 236-108.074219 236-236 236zm0 0" />
+								</svg>
+							</div>
+							<div class="title mb-2">
+								<h5 class="text-capitalize">exact information</h5>
+							</div>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
+									odio eius facere.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="feature">
+							<div class="icon mb-3">
+								<svg viewBox="-42 0 512 512.001">
+									<path
+										d="m210.351562 246.632812c33.882813 0 63.21875-12.152343 87.195313-36.128906 23.96875-23.972656 36.125-53.304687 36.125-87.191406 0-33.875-12.152344-63.210938-36.128906-87.191406-23.976563-23.96875-53.3125-36.121094-87.191407-36.121094-33.886718 0-63.21875 12.152344-87.191406 36.125s-36.128906 53.308594-36.128906 87.1875c0 33.886719 12.15625 63.222656 36.128906 87.195312 23.980469 23.96875 53.316406 36.125 87.191406 36.125zm-65.972656-189.292968c18.394532-18.394532 39.972656-27.335938 65.972656-27.335938 25.996094 0 47.578126 8.941406 65.976563 27.335938 18.394531 18.398437 27.339844 39.980468 27.339844 65.972656 0 26-8.945313 47.578125-27.339844 65.976562-18.398437 18.398438-39.980469 27.339844-65.976563 27.339844-25.992187 0-47.570312-8.945312-65.972656-27.339844-18.398437-18.394531-27.34375-39.976562-27.34375-65.976562 0-25.992188 8.945313-47.574219 27.34375-65.972656zm0 0" />
+									<path
+										d="m426.128906 393.703125c-.691406-9.976563-2.089844-20.859375-4.148437-32.351563-2.078125-11.578124-4.753907-22.523437-7.957031-32.527343-3.3125-10.339844-7.808594-20.550781-13.375-30.335938-5.769532-10.15625-12.550782-19-20.160157-26.277343-7.957031-7.613282-17.699219-13.734376-28.964843-18.199219-11.226563-4.441407-23.667969-6.691407-36.976563-6.691407-5.226563 0-10.28125 2.144532-20.042969 8.5-6.007812 3.917969-13.035156 8.449219-20.878906 13.460938-6.707031 4.273438-15.792969 8.277344-27.015625 11.902344-10.949219 3.542968-22.066406 5.339844-33.042969 5.339844-10.96875 0-22.085937-1.796876-33.042968-5.339844-11.210938-3.621094-20.300782-7.625-26.996094-11.898438-7.769532-4.964844-14.800782-9.496094-20.898438-13.46875-9.753906-6.355468-14.808594-8.5-20.035156-8.5-13.3125 0-25.75 2.253906-36.972656 6.699219-11.257813 4.457031-21.003906 10.578125-28.96875 18.199219-7.609375 7.28125-14.390625 16.121094-20.15625 26.273437-5.558594 9.785157-10.058594 19.992188-13.371094 30.339844-3.199219 10.003906-5.875 20.945313-7.953125 32.523437-2.0625 11.476563-3.457031 22.363282-4.148437 32.363282-.679688 9.777344-1.023438 19.953125-1.023438 30.234375 0 26.726562 8.496094 48.363281 25.25 64.320312 16.546875 15.746094 38.4375 23.730469 65.066406 23.730469h246.53125c26.621094 0 48.511719-7.984375 65.0625-23.730469 16.757813-15.945312 25.253906-37.589843 25.253906-64.324219-.003906-10.316406-.351562-20.492187-1.035156-30.242187zm-44.90625 72.828125c-10.933594 10.40625-25.449218 15.464844-44.378906 15.464844h-246.527344c-18.933594 0-33.449218-5.058594-44.378906-15.460938-10.722656-10.207031-15.933594-24.140625-15.933594-42.585937 0-9.59375.316406-19.066407.949219-28.160157.617187-8.921874 1.878906-18.722656 3.75-29.136718 1.847656-10.285156 4.199219-19.9375 6.996094-28.675782 2.683593-8.378906 6.34375-16.675781 10.882812-24.667968 4.332031-7.617188 9.316407-14.152344 14.816407-19.417969 5.144531-4.925781 11.628906-8.957031 19.269531-11.980469 7.066406-2.796875 15.007812-4.328125 23.628906-4.558594 1.050781.558594 2.921875 1.625 5.953125 3.601563 6.167969 4.019531 13.277344 8.605469 21.136719 13.625 8.859375 5.648437 20.273437 10.75 33.910156 15.152344 13.941406 4.507812 28.160156 6.796875 42.273437 6.796875 14.113282 0 28.335938-2.289063 42.269532-6.792969 13.648437-4.410156 25.058594-9.507813 33.929687-15.164063 8.042969-5.140624 14.953125-9.59375 21.121094-13.617187 3.03125-1.972656 4.902344-3.042969 5.953125-3.601563 8.625.230469 16.566406 1.761719 23.636719 4.558594 7.636719 3.023438 14.121093 7.058594 19.265625 11.980469 5.5 5.261719 10.484375 11.796875 14.816406 19.421875 4.542969 7.988281 8.207031 16.289062 10.886719 24.660156 2.800781 8.75 5.15625 18.398438 7 28.675782 1.867187 10.433593 3.132812 20.238281 3.75 29.144531v.007812c.636719 9.058594.957031 18.527344.960937 28.148438-.003906 18.449219-5.214844 32.378906-15.9375 42.582031zm0 0" />
+								</svg>
+							</div>
+							<div class="title mb-2">
+								<h5 class="text-capitalize">dedicated agent</h5>
+							</div>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
+									odio eius facere.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="feature">
+							<div class="icon mb-3">
+								<svg viewBox="0 0 512.00003 512.00003">
+									<path
+										d="m256 0c-107.941406 0-195.765625 87.824219-195.765625 195.765625v180.703125c0 24.914062 20.265625 45.179688 45.175781 45.179688 24.914063 0 45.179688-20.265626 45.179688-45.179688v-150.585938c0-24.910156-20.265625-45.175781-45.179688-45.175781-5.070312 0-9.867187 1.027344-14.425781 2.574219 6.425781-85.511719 77.902344-153.164062 165.015625-153.164062 87.066406 0 158.523438 67.589843 165.007812 153.042968-4.53125-1.550781-9.355468-2.453125-14.417968-2.453125-24.914063 0-45.179688 20.265625-45.179688 45.175781v150.585938c0 24.914062 20.265625 45.179688 45.179688 45.179688 5.304687 0 10.324218-1.085938 15.058594-2.773438v17.832031c0 8.308594-6.765626 15.058594-15.058594 15.058594h-108.1875c-6.238282-17.492187-22.796875-30.117187-42.402344-30.117187-24.910156 0-45.175781 20.265624-45.175781 45.175781 0 24.910156 20.265625 45.175781 45.175781 45.175781 19.605469 0 36.164062-12.628906 42.402344-30.117188h108.1875c24.910156 0 45.175781-20.265624 45.175781-45.175781 0-90.578125 0-150.265625 0-240.941406 0-107.941406-87.824219-195.765625-195.765625-195.765625zm0 0" />
+									<path
+										d="m481.882812 213.597656v175.15625c17.488282-6.234375 30.117188-22.792968 30.117188-42.402344v-90.351562c0-19.605469-12.628906-36.164062-30.117188-42.402344zm0 0" />
+									<path
+										d="m0 256v90.351562c0 19.609376 12.628906 36.167969 30.117188 42.402344v-175.15625c-17.488282 6.238282-30.117188 22.796875-30.117188 42.402344zm0 0" />
+								</svg>
+							</div>
+							<div class="title mb-2">
+								<h5 class="text-capitalize">support services</h5>
+							</div>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
+									odio eius facere.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="feature">
+							<div class="icon mb-3">
+								<svg viewBox="0 0 47.001 47.001">
+									<g>
+										<g>
+											<g>
+												<path
+													d="M46.907,20.12c-0.163-0.347-0.511-0.569-0.896-0.569h-2.927C41.223,9.452,32.355,1.775,21.726,1.775C9.747,1.775,0,11.522,0,23.501C0,35.48,9.746,45.226,21.726,45.226c7.731,0,14.941-4.161,18.816-10.857c0.546-0.945,0.224-2.152-0.722-2.699c-0.944-0.547-2.152-0.225-2.697,0.72c-3.172,5.481-9.072,8.887-15.397,8.887c-9.801,0-17.776-7.974-17.776-17.774c0-9.802,7.975-17.776,17.776-17.776c8.442,0,15.515,5.921,17.317,13.825h-2.904c-0.385,0-0.732,0.222-0.896,0.569c-0.163,0.347-0.11,0.756,0.136,1.051l4.938,5.925c0.188,0.225,0.465,0.355,0.759,0.355c0.293,0,0.571-0.131,0.758-0.355l4.938-5.925C47.018,20.876,47.07,20.467,46.907,20.12z" />
+												<path
+													d="M21.726,6.713c-1.091,0-1.975,0.884-1.975,1.975v11.984c-0.893,0.626-1.481,1.658-1.481,2.83c0,1.906,1.551,3.457,3.457,3.457c0.522,0,1.014-0.125,1.458-0.334l6.87,3.965c0.312,0.181,0.65,0.266,0.986,0.266c0.682,0,1.346-0.354,1.712-0.988c0.545-0.943,0.222-2.152-0.724-2.697l-6.877-3.971c-0.092-1.044-0.635-1.956-1.449-2.526V8.68C23.701,7.598,22.816,6.713,21.726,6.713z M21.726,24.982c-0.817,0-1.481-0.665-1.481-1.48c0-0.816,0.665-1.481,1.481-1.481s1.481,0.665,1.481,1.481C23.207,24.317,22.542,24.982,21.726,24.982z" />
+											</g>
+										</g>
+									</g>
+								</svg>
+							</div>
+							<div class="title mb-2">
+								<h5 class="text-capitalize">save your time</h5>
+							</div>
+							<div class="desc">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque atque aliquid,
+									odio eius facere.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gate">
+					<img src="img/b.jpg" class='img-fluid' alt="">
+				</div>
+			</div>
+		</section>
+		<section class="section about-prop" id='about-prop'>
+			<div class="container">
+				<h2 class="section-title">
+					<span class="the-dash" data-aos="zoom-in-right" data-aos-offset="-200"
+						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)">
+					</span>
+					<span class="the-title" data-splitting data-aos="zoom-in-right" data-aos-offset="-200"
+						data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)" data-aos-delay="300">02. about
+						property</span>
+				</h2>
+				<div class="row m-0">
+					<div class="col-md-6 p-0">
+						<div class="prop-slider-wrapper">
+							<div class="prop-slider">
+								<div class="item"><img class='img-fluid' src="img/s-1.jpg" alt=""></div>
+								<div class="item"><img class='img-fluid' src="img/s-2.jpg" alt=""></div>
+								<div class="item"><img class='img-fluid' src="img/s-3.jpg" alt=""></div>
+							</div>
+							<div class="prop-slider-controllers">
+								<button class="PrevArrow hover-target">
+									<ion-icon name="play-outline"></ion-icon>
+								</button>
+								<button class="NextArrow hover-target active">
+									<ion-icon name="play-outline"></ion-icon>
+								</button>
+							</div>
+							<div class="tag">
+								<span class="line"></span>
+								<span class='txt text-uppercase'><span>hot offer</span></span>
+							</div>
+						</div> <!-- ./ prop-slider-wrapper -->
+					</div> <!-- ./ col-md-6 -->
+					<div class="col-md-6 p-0">
+						<div class="prop-details">
+							<div class="prop-location">
+								<h5 class="text-capitalize">
+									cairo capital center
+									<br>
+									<span class='sub-title'>
+										<ion-icon name="location-outline"></ion-icon>
+										new cairo, cairo
+									</span>
+								</h5>
+							</div> <!-- ./ prop-location -->
+							<div class="price-box mt-2">
+								<span>EGP 3,500,000</span>
+							</div> <!-- ./ price-box -->
+							<div class="desc mt-2">
+								<p>sit amet consectetur adipisicing elit. Iure, quod sit amet consectetur adipisicing
+									elit. Iure, quod sit amet consectetur adipisicing elit. Iure, quod sit amet
+									consectetur adipisicing elit. Iure, quod Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Iure, quod.</p>
 
-                            </div>
-                            <div class="facilities mt-3">
-                                <ul class="d-flex">
-                                    <li>
-                                        <svg viewBox="0 0 512 512">
-                                            <g>
-                                                <path
-                                                    d="m482.09 235v-190h-30v33.906h-392.18v-33.906h-30v190h-29.91v232h30v-45.906h452v45.906h30v-232zm-.09 30v30h-452v-30zm-211-63.047c0-8.271 6.729-15 15-15h91.09c8.271 0 15 6.729 15 15v33.047h-121.09zm-30 33.047h-121.09v-33.047c0-8.271 6.729-15 15-15h91.09c8.271 0 15 6.729 15 15zm-181.09-126.094h392.18v126.094h-30v-33.047c0-24.813-20.187-45-45-45h-91.09c-11.517 0-22.032 4.353-30 11.495-7.968-7.141-18.483-11.495-30-11.495h-91.09c-24.813 0-45 20.187-45 45v33.047h-30zm-29.91 216.094h452v66.094h-452z" />
-                                            </g>
-                                        </svg>
-                                        <span>3</span>
-                                    </li>
-                                    <li>
-                                        <svg viewBox="0 0 512 512">
-                                            <g>
-                                                <path
-                                                    d="m30 346c0 59.101 37.62 109.509 90 128.221v37.779h30v-30.844c4.927.551 9.93.844 15 .844h182c5.07 0 10.073-.293 15-.844v30.844h30v-37.779c52.38-18.712 90-69.12 90-128.221 0-8.271 6.729-15 15-15h15v-30h-60v-30h30v-30h-30v-166c0-41.355-33.645-75-75-75s-75 33.645-75 75v16h-30v30h90v-30h-30v-16c0-24.813 20.187-45 45-45s45 20.187 45 45v226h-422v30h15c8.271 0 15 6.729 15 15zm422 0c0 58.448-47.103 106-105 106h-182c-57.897 0-105-47.552-105-106 0-5.258-.915-10.305-2.58-15h92.58v91h152v-91.01h152.58c-1.665 4.705-2.58 9.752-2.58 15.01zm-272-15h92v61h-92z" />
-                                                <path d="m332 151h30v30h-30z" />
-                                                <path d="m272 151h30v30h-30z" />
-                                                <path d="m302 211h30v30h-30z" />
-                                                <path d="m242 211h30v30h-30z" />
-                                                <path d="m362 211h30v30h-30z" />
-                                            </g>
-                                        </svg>
-                                        <span>3</span>
-                                    </li>
-                                    <li>
-                                        <svg viewBox="0 0 512 512.001">
-                                            <path
-                                                d="m497.355469 401.644531c19.496093 19.496094 19.496093 51.214844 0 70.710938-.027344.03125-.058594.058593-.089844.089843l-34.210937 33.785157c-3.898438 3.847656-8.976563 5.769531-14.050782 5.769531-5.164062 0-10.320312-1.984375-14.234375-5.945312-7.757812-7.859376-7.679687-20.523438.179688-28.285157l20.015625-19.769531h-320.964844c-44.113281 0-80-35.886719-80-80v-321.449219l-19.953125 19.6875c-7.863281 7.757813-20.527344 7.671875-28.285156-.191406-7.757813-7.863281-7.671875-20.527344.191406-28.285156l33.789063-33.332031c19.441406-19.179688 51.074218-19.179688 70.515624 0l33.789063 33.332031c7.863281 7.757812 7.949219 20.421875.191406 28.285156-3.914062 3.964844-9.074219 5.953125-14.238281 5.953125-5.074219 0-10.148438-1.917969-14.046875-5.761719l-21.953125-21.660156v323.421875c0 22.054688 17.945312 40 40 40h322.992188l-22.042969-21.769531c-7.859375-7.761719-7.941407-20.425781-.179688-28.285157 7.761719-7.855468 20.425781-7.9375 28.285157-.175781l34.210937 33.785157c.03125.03125.0625.058593.089844.089843zm-45.355469-401.644531h-259c-11.074219 0-20.039062 9-20 20.074219.042969 11.015625 8.984375 19.925781 20 19.925781h259c11.046875 0 20 8.953125 20 20v260c0 11.015625 8.910156 19.960938 19.925781 20 11.074219.039062 20.074219-8.925781 20.074219-20v-260c0-33.136719-26.863281-60-60-60zm-158 342.890625c11.046875 0 20-8.953125 20-20v-89.015625c0-30.328125-24.671875-55-55-55-13.285156 0-25.484375 4.734375-35 12.605469-9.515625-7.871094-21.714844-12.605469-35-12.605469-7.628906 0-14.902344 1.566406-21.511719 4.386719-3.558593-3.257813-8.285156-5.261719-13.488281-5.261719-11.046875 0-20 8.953125-20 20v125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.015625c0 11.046875 8.953125 20 20 20zm90.75-234.890625c-.105469 0-.207031.015625-.3125.015625-.101562 0-.203125-.015625-.308594-.015625-25.433594 0-46.128906 20.71875-46.128906 46.183594 0 11.042968 8.953125 20 20 20s20-8.957032 20-20c0-3.351563 2.808594-6.183594 6.128906-6.183594.105469 0 .207032-.015625.3125-.015625.101563 0 .203125.015625.308594.015625 3.183594 0 5.894531 2.601562 6.113281 5.769531-.394531 1.464844-3.460937 10.523438-22.625 31.605469-11.886719 13.070312-23.566406 23.714844-23.679687 23.816406-6.121094 5.554688-8.191406 14.304688-5.214844 22.011719 2.976562 7.710937 10.390625 12.796875 18.65625 12.796875h54c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-6.878906c17.757812-20.90625 25.757812-36.464844 25.757812-49.816406 0-25.464844-20.695312-46.183594-46.128906-46.183594zm0 0" />
-                                        </svg>
-                                        <span>300 m<sup>2</sup></span>
-                                    </li>
-                                </ul>
-                            </div> <!-- ./ features -->
-                        </div> <!-- ./ prop-details -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    </article>
+							</div>
+							<div class="facilities mt-3">
+								<ul class="d-flex">
+									<li>
+										<svg viewBox="0 0 512 512">
+											<g>
+												<path
+													d="m482.09 235v-190h-30v33.906h-392.18v-33.906h-30v190h-29.91v232h30v-45.906h452v45.906h30v-232zm-.09 30v30h-452v-30zm-211-63.047c0-8.271 6.729-15 15-15h91.09c8.271 0 15 6.729 15 15v33.047h-121.09zm-30 33.047h-121.09v-33.047c0-8.271 6.729-15 15-15h91.09c8.271 0 15 6.729 15 15zm-181.09-126.094h392.18v126.094h-30v-33.047c0-24.813-20.187-45-45-45h-91.09c-11.517 0-22.032 4.353-30 11.495-7.968-7.141-18.483-11.495-30-11.495h-91.09c-24.813 0-45 20.187-45 45v33.047h-30zm-29.91 216.094h452v66.094h-452z" />
+											</g>
+										</svg>
+										<span>3</span>
+									</li>
+									<li>
+										<svg viewBox="0 0 512 512">
+											<g>
+												<path
+													d="m30 346c0 59.101 37.62 109.509 90 128.221v37.779h30v-30.844c4.927.551 9.93.844 15 .844h182c5.07 0 10.073-.293 15-.844v30.844h30v-37.779c52.38-18.712 90-69.12 90-128.221 0-8.271 6.729-15 15-15h15v-30h-60v-30h30v-30h-30v-166c0-41.355-33.645-75-75-75s-75 33.645-75 75v16h-30v30h90v-30h-30v-16c0-24.813 20.187-45 45-45s45 20.187 45 45v226h-422v30h15c8.271 0 15 6.729 15 15zm422 0c0 58.448-47.103 106-105 106h-182c-57.897 0-105-47.552-105-106 0-5.258-.915-10.305-2.58-15h92.58v91h152v-91.01h152.58c-1.665 4.705-2.58 9.752-2.58 15.01zm-272-15h92v61h-92z" />
+												<path d="m332 151h30v30h-30z" />
+												<path d="m272 151h30v30h-30z" />
+												<path d="m302 211h30v30h-30z" />
+												<path d="m242 211h30v30h-30z" />
+												<path d="m362 211h30v30h-30z" />
+											</g>
+										</svg>
+										<span>3</span>
+									</li>
+									<li>
+										<svg viewBox="0 0 512 512.001">
+											<path
+												d="m497.355469 401.644531c19.496093 19.496094 19.496093 51.214844 0 70.710938-.027344.03125-.058594.058593-.089844.089843l-34.210937 33.785157c-3.898438 3.847656-8.976563 5.769531-14.050782 5.769531-5.164062 0-10.320312-1.984375-14.234375-5.945312-7.757812-7.859376-7.679687-20.523438.179688-28.285157l20.015625-19.769531h-320.964844c-44.113281 0-80-35.886719-80-80v-321.449219l-19.953125 19.6875c-7.863281 7.757813-20.527344 7.671875-28.285156-.191406-7.757813-7.863281-7.671875-20.527344.191406-28.285156l33.789063-33.332031c19.441406-19.179688 51.074218-19.179688 70.515624 0l33.789063 33.332031c7.863281 7.757812 7.949219 20.421875.191406 28.285156-3.914062 3.964844-9.074219 5.953125-14.238281 5.953125-5.074219 0-10.148438-1.917969-14.046875-5.761719l-21.953125-21.660156v323.421875c0 22.054688 17.945312 40 40 40h322.992188l-22.042969-21.769531c-7.859375-7.761719-7.941407-20.425781-.179688-28.285157 7.761719-7.855468 20.425781-7.9375 28.285157-.175781l34.210937 33.785157c.03125.03125.0625.058593.089844.089843zm-45.355469-401.644531h-259c-11.074219 0-20.039062 9-20 20.074219.042969 11.015625 8.984375 19.925781 20 19.925781h259c11.046875 0 20 8.953125 20 20v260c0 11.015625 8.910156 19.960938 19.925781 20 11.074219.039062 20.074219-8.925781 20.074219-20v-260c0-33.136719-26.863281-60-60-60zm-158 342.890625c11.046875 0 20-8.953125 20-20v-89.015625c0-30.328125-24.671875-55-55-55-13.285156 0-25.484375 4.734375-35 12.605469-9.515625-7.871094-21.714844-12.605469-35-12.605469-7.628906 0-14.902344 1.566406-21.511719 4.386719-3.558593-3.257813-8.285156-5.261719-13.488281-5.261719-11.046875 0-20 8.953125-20 20v125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.015625c0 11.046875 8.953125 20 20 20zm90.75-234.890625c-.105469 0-.207031.015625-.3125.015625-.101562 0-.203125-.015625-.308594-.015625-25.433594 0-46.128906 20.71875-46.128906 46.183594 0 11.042968 8.953125 20 20 20s20-8.957032 20-20c0-3.351563 2.808594-6.183594 6.128906-6.183594.105469 0 .207032-.015625.3125-.015625.101563 0 .203125.015625.308594.015625 3.183594 0 5.894531 2.601562 6.113281 5.769531-.394531 1.464844-3.460937 10.523438-22.625 31.605469-11.886719 13.070312-23.566406 23.714844-23.679687 23.816406-6.121094 5.554688-8.191406 14.304688-5.214844 22.011719 2.976562 7.710937 10.390625 12.796875 18.65625 12.796875h54c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-6.878906c17.757812-20.90625 25.757812-36.464844 25.757812-49.816406 0-25.464844-20.695312-46.183594-46.128906-46.183594zm0 0" />
+										</svg>
+										<span>300 m<sup>2</sup></span>
+									</li>
+								</ul>
+							</div> <!-- ./ features -->
+						</div> <!-- ./ prop-details -->
+					</div> <!-- ./ col-md -->
+				</div> <!-- ./ row -->
+				<div class="row mt-5">
+					<div class="col-12">
+						<div class="panorama-slider">
+							<div class="slider-for">
+								<div class="item-for">
+									<iframe
+										src="https://momento360.com/e/u/5432b6d27df649218b762475e2ff6e52?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+										scrolling='no' allowfullscreen frameborder="0"></iframe>
+								</div>
+								<div class="item-for">
+									<iframe
+										src="https://momento360.com/e/u/c3c1e35c243949edaf10c4dc507d1a00?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+										scrolling='no' allowfullscreen frameborder="0"></iframe>
+								</div>
+								<div class="item-for">
+									<iframe
+										src="https://momento360.com/e/u/6db99b7082304801a0852aadd279030d?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+										scrolling='no' allowfullscreen frameborder="0"></iframe>
+								</div>
+								<div class="item-for">
+									<iframe
+										src="https://momento360.com/e/u/fd46179c82534d56b7c29c03c98aef67?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+										scrolling='no' allowfullscreen frameborder="0"></iframe>
+								</div>
+							</div> <!-- ./ slider-for -->
+							<div class="slider-nav">
+								<div class="item-nav hover-target rec">
+									<h3 class="text-uppercase">Recepion.</h3>
+								</div>
+								<div class="item-nav hover-target bed">
+									<h3 class="text-uppercase">bedroom.</h3>
+								</div>
+								<div class="item-nav hover-target bath">
+									<h3 class="text-uppercase">bathroom.</h3>
+								</div>
+								<div class="item-nav hover-target garden">
+									<h3 class="text-uppercase">garden.</h3>
+								</div>
+							</div> <!-- ./ slider-nav -->
+							<div class="panorama-slider-controllers">
+								<button class="PrevArrow hover-target">
+									<ion-icon name="play-outline"></ion-icon>
+								</button>
+								<button class="NextArrow hover-target">
+									<ion-icon name="play-outline"></ion-icon>
+								</button>
+							</div>
+						</div> <!-- ./ panorama-slider -->
+					</div> <!-- ./ col-12 -->
+				</div> <!-- ./ row -->
+			</div> <!-- ./ container -->
+			<div class="row mt-5">
+				<div class="col-12 mt-5">
+					<div class="container">
+						<div class="inner-text mt-3">
+							<h4 class="text-capitalize">photo gallery</h4>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab ducimus beatae, rerum
+								consequatur aspernatur.</p>
+						</div>
+					</div>
+					<div class="gallery-tabs">
+						<div class="container">
+							<nav>
+								<div class="nav nav-tabs" id="nav-tab">
+									<a class="nav-item nav-link active" data-toggle="tab" href="#maps">maps & street
+										view</a>
+									<a class="nav-item nav-link" data-toggle="tab" href="#f-plan">floorplan</a>
+								</div>
+							</nav>
+						</div>
+						<div class="tab-content gallery-parent" id="nav-tabContent">
+							<div class="tab-pane show active" id="maps">
+								<div class="container">
+									<div id="map"></div>
+								</div>
+							</div>
+							<div class="tab-pane" id="f-plan">
+								<div class="row m-0">
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-6 p-0">
+										<a data-fancybox="gallery" data-height="400" href="img/d.jpg">
+											<img class='img-fluid' src="img/d.jpg">
+										</a>
+									</div>
+								</div> <!-- ./ tab-pane -->
+							</div> <!-- ./ tab-pane -->
+						</div> <!-- ./ tab-content gallery-parent -->
+					</div> <!-- ./ gallery-tabs -->
+				</div> <!-- ./ col-12 -->
+			</div> <!-- ./ row -->
+		</section> <!-- ./ section about-prop -->
+		<footer class='footer' id='footer-contact'>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 my-5">
+						<h2 class="section-title">
+							<span class="the-dash" data-aos="zoom-in-right" data-aos-offset="0"
+								data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)">
+							</span>
+							<span class="the-title" data-splitting data-aos="zoom-in-right" data-aos-offset="0"
+								data-aos-easing="cubic-bezier(0.84, 0, 0.08, 0.99)" data-aos-delay="300">04. It’s Easy
+								to Find Us</span>
+						</h2>
+						<ul class="contact-info mt-3">
+							<li>
+								<div class="icon">
+									<ion-icon name="location-outline"></ion-icon>
+								</div>
+								<div>
+									<h3>ADDRESS</h3>
+									<p>First New Cairo, Cairo ( Mohamed Ali )</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<ion-icon name="call-outline"></ion-icon>
+								</div>
+								<div>
+									<h3>PHONE</h3>
+									<p>
+										<a class='hover-target' href="tel:0123456789">(+2) 0123456789 ,</a>
+										<a class='hover-target' href="tel:0123456789">(+2) 0123456789</a>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<ion-icon name="mail-outline"></ion-icon>
+								</div>
+								<div>
+									<h3>EMAIL</h3>
+									<p><a class='hover-target'
+											href="mailto:information@osus.com">information@osus.com</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-7 my-5">
+						<h2 class='contact-title'>Contact Form</h2>
+						<div class="contact-form">
+							<form action="" method="">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<ion-icon name="person-sharp"></ion-icon>
+											<input type="text" class="form-control hover-target" placeholder="Name">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<ion-icon name="mail-open"></ion-icon>
+											<input type="email" class="form-control hover-target" placeholder="Email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<ion-icon name="call"></ion-icon>
+											<input type="text" class="form-control hover-target" placeholder="Mobile">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group form-group--msg">
+											<ion-icon name="create-sharp"></ion-icon>
+											<textarea rows="6" class="form-control hover-target"
+												placeholder="Massege"></textarea>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group form-group--submit m-0">
+											<ion-icon name="navigate"></ion-icon>
+											<input type="submit" value="Send" class="submit hover-target">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="footer-content">
+					<ul class="social-links mb-5">
+						<li>
+							<a title="Facebook" href="#">
+								<span></span>
+								<span></span>
+								<span>
+									<svg viewBox="0 0 512 512">
+										<g>
+											<g>
+												<path
+													d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z" />
+											</g>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a title="Twitter" href="#">
+								<span></span>
+								<span></span>
+								<span>
+									<svg viewBox="0 -47 512.00203 512">
+										<path
+											d="m191.011719 419.042969c-22.140625 0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0" />
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a title="Instagram" href="#">
+								<span></span>
+								<span></span>
+								<span>
+									<svg viewBox="0 0 512.00096 512.00096">
+										<path
+											d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm108.578125 373.410156c0 59.867188-48.707031 108.574219-108.578125 108.574219h-234.8125c-59.871094 0-108.578125-48.707031-108.578125-108.574219v-234.816406c0-59.871094 48.707031-108.578125 108.578125-108.578125h234.816406c59.867188 0 108.574219 48.707031 108.574219 108.578125zm0 0" />
+										<path
+											d="m256 116.003906c-77.195312 0-139.996094 62.800782-139.996094 139.996094s62.800782 139.996094 139.996094 139.996094 139.996094-62.800782 139.996094-139.996094-62.800782-139.996094-139.996094-139.996094zm0 249.976563c-60.640625 0-109.980469-49.335938-109.980469-109.980469 0-60.640625 49.339844-109.980469 109.980469-109.980469 60.644531 0 109.980469 49.339844 109.980469 109.980469 0 60.644531-49.335938 109.980469-109.980469 109.980469zm0 0" />
+										<path
+											d="m399.34375 66.285156c-22.8125 0-41.367188 18.558594-41.367188 41.367188 0 22.8125 18.554688 41.371094 41.367188 41.371094s41.371094-18.558594 41.371094-41.371094-18.558594-41.367188-41.371094-41.367188zm0 52.71875c-6.257812 0-11.351562-5.09375-11.351562-11.351562 0-6.261719 5.09375-11.351563 11.351562-11.351563 6.261719 0 11.355469 5.089844 11.355469 11.351563 0 6.257812-5.09375 11.351562-11.355469 11.351562zm0 0" />
+									</svg>
+								</span>
+							</a>
+						</li>
+					</ul>
+					<div class="copyright">
+						<p>© 2020 8WORX All Right Reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</article>
 
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src='js/slick.js'></script>
-    <script src="js/main.js"></script>
-    <script>
-        // INIT SCROLLOUT PLUGIN
-        ScrollOut();
+	<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="js/splitting.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src='js/slick.js'></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZRhU7Dd0vcpNFoP5LhKfEDrbj9Boo75E&callback=initMap">
+		</script>
+	<script src="js/main.js"></script>
+	<script>
+		// INIT AOS PLUGIN
+		AOS.init();
+		// INIT SPLITTING PLUGIN
+		Splitting();
+		//  INIT PROPERTY SLIDER
+		$('.prop-slider').slick({
+			autoplay: true,
+			pauseOnHover: true,
+			speed: 1800,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+			dots: false,
+			arrows: true,
+			prevArrow: '.prop-slider-controllers .PrevArrow',
+			nextArrow: '.prop-slider-controllers .NextArrow',
+		})
+		$('.slider-for').slick({
+			autoplay: true,
+			pauseOnHover: true,
+			autoplaySpeed: 10000,
+			speed: 600,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: true,
+			arrows: true,
+			fade: true,
+			prevArrow: '.panorama-slider-controllers .PrevArrow',
+			nextArrow: '.panorama-slider-controllers .NextArrow',
+		});
+		var sliderNav = $('.slider-nav').children('div.item-nav');
+		var maxItems = sliderNav.length;
+		$('.slider-nav').slick({
+			autoplay: true,
+			pauseOnHover: true,
+			autoplaySpeed: 10000,
+			speed: 600,
+			slidesToShow: maxItems,
+			slidesToScroll: 1,
+			cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+			dots: false,
+			arrows: false,
+			asNavFor: '.slider-for',
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+					}
+				}
+			]
+		});
 
-        //  INIT PROPERTY SLIDER
-        $('.prop-slider').slick({
-            autoplay: true,
-            pauseOnDotsHover: true,
-            speed: 1800,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
-            dots: false,
-            arrows: true,
-            prevArrow: '.prop-slider-controllers .PrevArrow',
-            nextArrow: '.prop-slider-controllers .NextArrow',
-        })
-    </script>
+		//  GOOGLE MAPS API
+
+		function initMap() {
+
+			var latLng = { lat: 30.0343969, lng: 31.4548512 }; // latitude and longitude
+
+			var options = {
+				zoom: 9,
+				center: latLng,
+				mapTypeId: 'terrain', // hybrid , satellite , roadmap ,
+				scrollwheel: false,
+				draggable: true,
+				styles: [
+					{ elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+					{ elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+					{ elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+					{
+						featureType: 'administrative.locality',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#d59563' }]
+					},
+					{
+						featureType: 'poi',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#d59563' }]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'geometry',
+						stylers: [{ color: '#263c3f' }]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#6b9a76' }]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry',
+						stylers: [{ color: '#38414e' }]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry.stroke',
+						stylers: [{ color: '#212a37' }]
+					},
+					{
+						featureType: 'road',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#9ca5b3' }]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry',
+						stylers: [{ color: '#746855' }]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry.stroke',
+						stylers: [{ color: '#1f2835' }]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#f3d19c' }]
+					},
+					{
+						featureType: 'transit',
+						elementType: 'geometry',
+						stylers: [{ color: '#2f3948' }]
+					},
+					{
+						featureType: 'transit.station',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#d59563' }]
+					},
+					{
+						featureType: 'water',
+						elementType: 'geometry',
+						stylers: [{ color: '#17263c' }]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.fill',
+						stylers: [{ color: '#515c6d' }]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.stroke',
+						stylers: [{ color: '#17263c' }]
+					}
+				]
+				// panControl: true,
+				// zoomControl: true,
+				// disableDefaultUI: true,
+				// mapTypeControl: true,
+				// scaleControl: true,
+				// streetViewControl: true,
+				// overviewMapControl: true,
+				// rotateControl: true,
+			};
+
+			var map = new google.maps.Map(document.getElementById('map'), options);
+
+			var marker = new google.maps.Marker({
+				position: latLng,
+				map: map,
+				icon: 'img/pin.png',
+				animation: google.maps.Animation.BOUNCE,
+				title: 'OSUS PROPERTY MANAGEMENT'
+			});
+
+			var infoWindow = new google.maps.InfoWindow({
+				content: '<p>Osus Property Management</p>'
+			})
+
+			marker.addListener('click', function () {
+				infoWindow.open(map, marker);
+			});
+
+			google.maps.event.addListener(marker, 'click', function () {
+				var pos = map.getZoom();
+				map.setZoom(12);
+				map.setCenter(marker.getPosition());
+				window.setTimeout(function () { map.setZoom(pos); }, 3000);
+			});
+		}
+
+		// INIT FANCYBOX GALLERY PLUGIN
+		$('[data-fancybox="gallery"]').fancybox({
+			openEffect: "none",
+			closeEffect: "none",
+			// loop: false,
+			// closeExisting: false,
+			// parentEl: ".gallery-parent",
+			// hideScrollbar: false,
+			// hash: null,
+		});
+	</script>
 </body>
 
 </html>
