@@ -1000,6 +1000,7 @@ section.about-prop .prop-details .box {
 .prop-details .box__front {
     background-color: #b7c9e5;
     background-image: url('../img/d.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
     color: #333;
