@@ -16,7 +16,8 @@ $(document).ready(function () {
             .to(splashScreen, { duration: 0, backgroundSize: 700 + scrollTop * 4 + 'px', ease: 'power1.inOut' })
         if (scrollTop > 500) {
             timeline1
-                .to(splashScreen, { duration: .5, scale: 1.5, autoAlpha: 0, ease: 'power1.inOut' })
+                .to(splashScreen, { duration: .3, scale: 1.2, ease: 'power1.in' })
+                .to(splashScreen, { duration: .3, autoAlpha: 0, ease: 'power1.in' }, ('-=.3'))
                 .to('.animated-shape', { duration: .3, autoAlpha: 0, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, y: 0, opacity: 1, ease: 'power1.out' }, ('-=.2'))
                 .to(headline, { duration: .5, y: 0, ease: 'power1.inOut' }, ('-=.2'))
@@ -35,7 +36,8 @@ $(document).ready(function () {
                 .to(link, { duration: .7, y: 0, autoAlpha: 1, stagger: .1, ease: 'power1.out' })
         } else {
             timeline1
-                .to(splashScreen, { duration: .5, scale: 1, autoAlpha: 1, ease: 'power1.inOut' })
+                .to(splashScreen, { duration: .3, scale: 1, ease: 'power1.out' })
+                .to(splashScreen, { duration: .3, autoAlpha: 1, ease: 'power1.out' }, ('-=.3'))
                 .to('.animated-shape', { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, y: 30, opacity: 0, ease: 'power1.in' }, ('-=.2'))
                 .to(headline, { duration: .5, y: 150, ease: 'power1.inOut' }, ('-=.2'))
