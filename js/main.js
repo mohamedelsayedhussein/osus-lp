@@ -7,8 +7,8 @@ $(document).ready(function () {
             splashScreen = $('.splash-screen'),
             formContact = $('header .form-contact'),
             headline = $('header .banner h1.title span.headline'),
-            headlineChars = $('.banner h1.title span.headline .char');
-        descInner = $('.banner h3.subtitle span.desc__inner'),
+            headlineChars = $('.banner h1.title span.headline .char'),
+            descInner = $('.banner h3.subtitle span.desc__inner'),
             descInnerWords = $('.banner h3.subtitle span.desc__inner .word'),
             mask = $('header.header .fancy-mask');
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 .to(splashScreen, { duration: .5, scale: 1, autoAlpha: 1, ease: 'power1.inOut' })
                 .to('.animated-shape', { duration: .3, autoAlpha: 1, ease: 'power1.inOut' })
                 .to(formContact, { duration: .5, y: 30, opacity: 0, ease: 'power1.in' }, ('-=.2'))
-                .to(headline, { duration: .5, y: 50, ease: 'power1.inOut' }, ('-=.2'))
+                .to(headline, { duration: .5, y: 150, ease: 'power1.inOut' }, ('-=.2'))
                 .to(headlineChars, { duration: 0, opacity: 0, x: 50, scale: 0.5, ease: 'none' })
                 .to(descInner, { duration: .5, y: 150, ease: 'power1.inOut' })
                 .set(descInnerWords, {
