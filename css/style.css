@@ -309,9 +309,10 @@ nav.navigation__menu .links__item {
     overflow: hidden;
 }
 nav.navigation__menu .links__item .links__title {
+    position: relative;
     display: inline-block;
     background: #333;
-    padding: 0 0.2rem;
+    padding: 0 0.7rem;
     margin-bottom: 1px;
     text-transform: uppercase;
     -webkit-transform: translateY(100px);
@@ -319,6 +320,20 @@ nav.navigation__menu .links__item .links__title {
     transform: translateY(100px);
     opacity: 0;
     visibility: inherit;
+}
+nav.navigation__menu .links__item .links__title:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: width .8s cubic-bezier(0.8, 0, 0.2, 1);
+}
+nav.navigation__menu .links__item .links__title:hover:after {
+    width: 100%;
 }
 @media (max-width: 767px) {
     nav.navigation__menu {
@@ -1167,6 +1182,7 @@ section.about-prop .prop-slider-controllers button.active {
 }
 section.about-prop .prop-summary {
     background: #f3f4f5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     height: 100%;
     padding: 0 2rem;
 }
