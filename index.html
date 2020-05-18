@@ -244,7 +244,8 @@
 						<div class="col-lg-7">
 							<div class="full-details mb-3">
 								<h5 class="inner-title text-capitalize pb-3 mb-3">full description</h5>
-								<p class='mb-3'>Alias ab ducimus beatae,Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								<p class='mb-3'>Alias ab ducimus beatae,Lorem ipsum dolor sit amet consectetur
+									adipisicing elit.
 									Lorem ipsum
 									dolor sit amet consectetur adipisicing elit.
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -306,7 +307,9 @@
 										<p class="box__subtitle">72 months installments</p>
 									</div>
 									<div class="box__back">
-										<p class="box__body">dignissimos distinctio saepe cum dolores? Hic est voluptatem laboriosam autem, exercitationem dolore eius totam aut veniam officiis, impedit iure!</p>
+										<p class="box__body">dignissimos distinctio saepe cum dolores? Hic est
+											voluptatem laboriosam autem, exercitationem dolore eius totam aut veniam
+											officiis, impedit iure!</p>
 									</div>
 								</div>
 							</div>
@@ -396,50 +399,46 @@
 				<div class="row mt-5">
 					<div class="col-12">
 						<div class="panorama-slider">
-							<div class="slider-for">
-								<div class="item-for">
+							<ul class="slider-nav nav nav-tabs border-0" id="myTab" role="tablist">
+								<li class="nav-item hover-target rec">
+									<h3 class="nav-link text-uppercase" data-toggle="tab" href="#first"
+										aria-selected="false">Reception.</h3>
+								</li>
+								<li class="nav-item hover-target bed">
+									<h3 class="nav-link text-uppercase active" data-toggle="tab" href="#second"
+										aria-selected="true">bedroom.</h3>
+								</li>
+								<li class="nav-item hover-target bath">
+									<h3 class="nav-link text-uppercase" data-toggle="tab" href="#third"
+										aria-selected="false">bathroom.</h3>
+								</li>
+								<li class="nav-item hover-target garden">
+									<h3 class="nav-link text-uppercase" data-toggle="tab" href="#fourth"
+										aria-selected="false">garden.</h3>
+								</li>
+							</ul> <!-- ./ slider-nav -->
+							<div class="slider-for tab-content" id="myTabContent">
+								<div class="item-for tab-pane" id="first">
 									<iframe
 										src="https://momento360.com/e/u/5432b6d27df649218b762475e2ff6e52?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
 										scrolling='no' allowfullscreen frameborder="0"></iframe>
 								</div>
-								<div class="item-for">
+								<div class="item-for tab-pane show active" id="second">
 									<iframe
-										src="https://momento360.com/e/u/c3c1e35c243949edaf10c4dc507d1a00?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
-										scrolling='no' allowfullscreen frameborder="0"></iframe>
+									src="https://momento360.com/e/u/c3c1e35c243949edaf10c4dc507d1a00?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+									scrolling='no' allowfullscreen frameborder="0"></iframe>
 								</div>
-								<div class="item-for">
+								<div class="item-for tab-pane" id="third">
 									<iframe
-										src="https://momento360.com/e/u/6db99b7082304801a0852aadd279030d?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
-										scrolling='no' allowfullscreen frameborder="0"></iframe>
+									src="https://momento360.com/e/u/6db99b7082304801a0852aadd279030d?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
+									scrolling='no' allowfullscreen frameborder="0"></iframe>
 								</div>
-								<div class="item-for">
+								<div class="item-for tab-pane" id="fourth">
 									<iframe
 										src="https://momento360.com/e/u/fd46179c82534d56b7c29c03c98aef67?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=50"
 										scrolling='no' allowfullscreen frameborder="0"></iframe>
 								</div>
 							</div> <!-- ./ slider-for -->
-							<div class="slider-nav">
-								<div class="item-nav hover-target rec">
-									<h3 class="text-uppercase">Recepion.</h3>
-								</div>
-								<div class="item-nav hover-target bed">
-									<h3 class="text-uppercase">bedroom.</h3>
-								</div>
-								<div class="item-nav hover-target bath">
-									<h3 class="text-uppercase">bathroom.</h3>
-								</div>
-								<div class="item-nav hover-target garden">
-									<h3 class="text-uppercase">garden.</h3>
-								</div>
-							</div> <!-- ./ slider-nav -->
-							<div class="panorama-slider-controllers">
-								<button class="PrevArrow hover-target">
-									<ion-icon name="play-outline"></ion-icon>
-								</button>
-								<button class="NextArrow hover-target">
-									<ion-icon name="play-outline"></ion-icon>
-								</button>
-							</div>
 						</div> <!-- ./ panorama-slider -->
 					</div> <!-- ./ col-12 -->
 				</div> <!-- ./ row -->
@@ -734,49 +733,46 @@
 			prevArrow: '.prop-slider-controllers .PrevArrow',
 			nextArrow: '.prop-slider-controllers .NextArrow',
 		})
-		$('.slider-for').slick({
-			autoplay: true,
-			pauseOnHover: true,
-			autoplaySpeed: 10000,
-			speed: 600,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: true,
-			arrows: true,
-			fade: true,
-			prevArrow: '.panorama-slider-controllers .PrevArrow',
-			nextArrow: '.panorama-slider-controllers .NextArrow',
-		});
-		var sliderNav = $('.slider-nav').children('div.item-nav');
-		var maxItems = sliderNav.length;
-		$('.slider-nav').slick({
-			autoplay: true,
-			pauseOnHover: true,
-			autoplaySpeed: 10000,
-			speed: 600,
-			slidesToShow: maxItems,
-			slidesToScroll: 1,
-			cssEase: 'cubic-bezier(.84, 0, .08, .99)',
-			dots: false,
-			arrows: false,
-			asNavFor: '.slider-for',
-			focusOnSelect: true,
-			responsive: [
-				{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 3,
-					}
-				},
-				{
-					breakpoint: 767,
-					settings: {
-						slidesToShow: 2,
-					}
-				}
-			]
-		});
-
+		/*
+				$('.slider-for').slick({
+					autoplay: true,
+					pauseOnHover: true,
+					autoplaySpeed: 10000,
+					speed: 1800,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+					dots: true,
+					arrows: true,
+					asNavFor: '.slider-nav',
+					prevArrow: '.panorama-slider-controllers .PrevArrow',
+					nextArrow: '.panorama-slider-controllers .NextArrow',
+				});
+				var sliderNav = $('.slider-nav').children('div.item-nav');
+				var maxItems = sliderNav.length;
+				$('.slider-nav').slick({
+					slidesToShow: maxItems,
+					slidesToScroll: 1,
+					dots: false,
+					arrows: false,
+					asNavFor: '.slider-for',
+					focusOnSelect: true,
+					responsive: [
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 3,
+							}
+						},
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 2,
+							}
+						}
+					]
+				});
+		*/
 		//  GOOGLE MAPS API
 
 		function initMap() {
