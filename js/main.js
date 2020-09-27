@@ -128,8 +128,4 @@ $(document).ready(function () {
             scrollTop: $(href).offset().top
         }, 1000);
     });
-
-
-
-
 });
